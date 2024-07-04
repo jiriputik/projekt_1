@@ -104,7 +104,7 @@ The sum of all the numbers is {result['sum_digit']}.
 
 # graf hlavička
 
-max_length = 1 + max(list(result_length.values())) # zjištění potřebné šířky grafu, přičíst 2, aby to bylo hezký :-)  
+max_length = 2 + max(list(result_length.values())) # zjištění potřebné šířky grafu, přičíst 2, aby to bylo hezký :-)  
 print(f"LEN|{"OCCURENCES":^{max_length}}|NR.")
 print(page)
 
