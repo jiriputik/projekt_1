@@ -58,7 +58,7 @@ if user_name not in users.keys() or users[user_name] != user_pass:
     print("unregistered user, terminating the program..")
     exit()
 else:
-    print(f'Welcome to the app, {user_name}')
+    print(f"Welcome to the app, {user_name}")
 print(page)
 print("We have 3 texts to be analyzed.")
 print(page)
@@ -71,9 +71,9 @@ print(page)
 # načtení a analýza textu
 
 wrd_list_rough = TEXTS[(int(text_nr)-1)].split()
-wrdlist = [word.strip(",.") for word in wrd_list_rough]   # očištění od . a ,
+wrdlist = [word.strip(",.") for word in wrd_list_rough]   # očištění od znaků ".,"
 result['words_nr'] = (len(wrdlist))
-count_titleist = count_upper = count_lower = count_digit = sum_digit = 0
+count_titleist = count_upper = count_lower = count_digit = sum_digit = 0    # nulování čítačů
 for word in wrdlist:
     if not len(word) in result_length.keys():
         result_length[len(word)] = 1
@@ -85,6 +85,9 @@ for word in wrdlist:
     if word.isdigit():
         count_digit += 1
         sum_digit += int(word)
+
+# zapsání výsledků
+
 result['titleist'] = count_titleist
 result['uppercase'] = count_upper
 result['lowercase'] = count_lower
