@@ -135,7 +135,7 @@ for word in wrdlist:
         result_length[len(word)] = 1
     else:
         result_length[len(word)] += 1
-    count_titleist += 1 if (word.istitle() and word[0].isalpha()) else 0
+    count_titleist += 1 if (word[0].istitle() and word[0].isalpha()) else 0
     count_upper += 1 if word.isupper() and word.isalpha() else 0
     count_lower += 1 if word.islower() and word.isalpha() else 0
     if word.isdigit() or word.find(".") != -1:
